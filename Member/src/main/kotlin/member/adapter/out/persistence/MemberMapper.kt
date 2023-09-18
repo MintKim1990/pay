@@ -1,4 +1,4 @@
-package example.application.service
+package member.adapter.out.persistence
 
 import example.adapter.out.persistence.MemberEntity
 import example.domain.Member
