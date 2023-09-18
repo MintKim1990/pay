@@ -1,6 +1,6 @@
 package example.adapter.`in`.web
 
-import example.adapter.WebAdapter
+import common.WebAdapter
 import example.adapter.`in`.web.request.MemberCreateRequest
 import example.application.port.`in`.MemberCreateUseCase
 import example.application.port.`in`.command.MemberCreateCommand

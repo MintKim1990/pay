@@ -6,7 +6,6 @@ import example.application.port.`in`.command.MemberCreateCommand
 import example.application.port.out.MemberCreatePort
 import example.domain.Member
 import org.springframework.transaction.annotation.Transactional
-import javax.validation.Validation
 
 @Transactional(readOnly = true)
 @UseCase

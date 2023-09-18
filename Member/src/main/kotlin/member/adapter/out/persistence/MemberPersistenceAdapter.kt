@@ -1,6 +1,6 @@
 package example.adapter.out.persistence
 
-import example.adapter.PersistenceAdapter
+import common.PersistenceAdapter
 import example.application.port.out.MemberCreatePort
 import example.application.port.out.MemberFindPort
 import member.application.port.out.MemberModifyPort

@@ -1,7 +1,6 @@
-package example.adapter
+package common
 
 import org.springframework.core.annotation.AliasFor
-import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 

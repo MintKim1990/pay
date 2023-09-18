@@ -13,6 +13,8 @@ dependencies {
     // 코틀린 문법상 대부분 기본생성자가 없어서 RequestBody 파싱에러 에러나는 부분을 해결해주는 모듈
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
+    implementation(project(":common"))
+
     // H2DB
     runtimeOnly("com.h2database:h2")
 }

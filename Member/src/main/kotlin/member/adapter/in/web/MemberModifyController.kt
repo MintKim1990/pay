@@ -1,6 +1,6 @@
 package member.adapter.`in`.web
 
-import example.adapter.WebAdapter
+import common.WebAdapter
 import example.adapter.`in`.web.request.MemberModifyRequest
 import example.application.port.`in`.command.MemberModifyCommand
 import example.domain.Member
