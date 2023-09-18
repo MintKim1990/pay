@@ -3,12 +3,13 @@ package example.adapter.out.persistence
 import example.adapter.PersistenceAdapter
 import example.application.port.out.MemberCreatePort
 import example.application.port.out.MemberFindPort
+import member.application.port.out.MemberModifyPort
 import org.springframework.data.repository.findByIdOrNull
 
 @PersistenceAdapter
 class MemberPersistenceAdapter(
     private val memberRepository: MemberRepository,
-) : MemberCreatePort, MemberFindPort {
+) : MemberCreatePort, MemberFindPort, MemberModifyPort {
 
     override fun createMember(name: String, address: String, email: String, isCorp: Boolean): MemberEntity {
 
@@ -24,6 +25,12 @@ class MemberPersistenceAdapter(
 
     override fun findMember(id: Long): MemberEntity {
         return memberRepository.findByIdOrNull(id) ?: throw NoSuchElementException()
+    }
+
+    override fun modifyMember(id: Long, name: String, address: String, email: String): MemberEntity {
+        val memberEntity = memberRepository.findByIdOrNull(id) ?: throw NoSuchElementException()
+        memberEntity.modify(name = name, email = email, address = address)
+        return memberEntity
     }
 
 }

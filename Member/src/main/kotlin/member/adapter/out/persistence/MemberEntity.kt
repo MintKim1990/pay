@@ -20,6 +20,10 @@ class MemberEntity(
 
 ) {
 
-
+    fun modify(name: String, email: String, address: String) {
+        this.name = name
+        this.email = email
+        this.address = address
+    }
 
 }

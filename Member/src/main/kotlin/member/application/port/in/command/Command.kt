@@ -18,3 +18,14 @@ data class MemberFindCommand(
     @field:NotNull
     val id: Long
 ) : CommandValidator<MemberFindCommand>()
+
+data class MemberModifyCommand(
+    @field:NotNull
+    val id: Long,
+    @field:NotBlank
+    val name: String,
+    @field:NotBlank
+    val address: String,
+    @field:NotBlank
+    val email: String,
+) : CommandValidator<MemberFindCommand>()

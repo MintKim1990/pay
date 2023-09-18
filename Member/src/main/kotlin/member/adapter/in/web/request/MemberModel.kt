@@ -6,3 +6,9 @@ data class MemberCreateRequest(
     val email: String,
     val isCorp: Boolean,
 )
+
+data class MemberModifyRequest(
+    val name: String,
+    val address: String,
+    val email: String,
+)

@@ -3,14 +3,13 @@ package example.adapter.`in`.web
 import example.adapter.WebAdapter
 import example.application.port.`in`.MemberFindUseCase
 import example.application.port.`in`.command.MemberFindCommand
-import example.application.port.out.MemberFindPort
 import example.domain.Member
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 
 @WebAdapter(path = "/member")
-class FindMemberController(
+class MemberFindController(
     private val memberFindUseCase: MemberFindUseCase
 ) {
 
